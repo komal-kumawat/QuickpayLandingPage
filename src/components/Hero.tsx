@@ -5,10 +5,6 @@ import { Button } from "@/components/ui/button";
 import phoneMockup from "@/assets/phone-mockup.png";
 import Image from "next/image";
 
-<motion.div>
-    <Image src={phoneMockup} alt="App" />
-</motion.div>
-
 const Hero = () => {
     return (
         <section className="relative min-h-screen pt-24 pb-16 overflow-hidden">
@@ -95,7 +91,7 @@ const Hero = () => {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.6 }}
-                                className="absolute -left-8 top-1/4 bg-card rounded-2xl p-4 shadow-card-hover border border-border text-gray-300"
+                                className="absolute -left-8 top-1/4 bg-card rounded-2xl p-4 shadow-card-hover  text-gray-300 bg-white text-gray-800"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
@@ -103,7 +99,7 @@ const Hero = () => {
                                     </div>
                                     <div>
                                         <p className="text-xs text-muted-foreground">Sent to John</p>
-                                        <p className="font-semibold text-foreground">$250.00</p>
+                                        <p className="font-semibold text-gray-800">$250.00</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -112,7 +108,7 @@ const Hero = () => {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.8 }}
-                                className="absolute -right-4 bottom-1/4 bg-card rounded-2xl p-4 shadow-card-hover border border-border"
+                                className="absolute -right-4 bottom-1/4 bg-card rounded-2xl p-4 shadow-card-hover bg-white text-gray-800"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
