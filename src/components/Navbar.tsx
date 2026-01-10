@@ -3,7 +3,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
+import Image from "next/image";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -20,14 +21,8 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <a href="/" className="flex items-center gap-2">
-                        <div
-                            className="w-10 h-10 rounded-xl flex items-center justify-center"
-                            style={{
-                                background: "linear-gradient(135deg, hsl(217,91%,50%) 0%, hsl(199,89%,48%) 50%, hsl(174,72%,46%) 100%)",
-                            }}
-                        >
-                            <Wallet className="w-5 h-5 text-primary-foreground" />
-                        </div>
+                        
+                            <Image src="./logo.svg" width={40} height={40} alt="logo"></Image>
                         <span className="text-xl font-display font-bold text-foreground">
                             QuickPay
                         </span>
@@ -49,14 +44,19 @@ const Navbar = () => {
 
                     {/* Desktop CTA */}
                     <div className="hidden md:flex items-center gap-4">
-                        <Button variant="ghost" size="sm">
-                            Log In
-                        </Button>
-                        <Button size="sm" className="bg-hero-gradient hover:opacity-90 transition-opacity" style={{
+                        <Link href="https://quick-pay-olive-ten.vercel.app/signin">
+                            <Button variant="ghost" size="sm">
+                                Log In
+                            </Button>
+                        </Link>
+                        <Link href="https://quick-pay-olive-ten.vercel.app/signup">
+                            <Button size="sm" className="bg-hero-gradient hover:opacity-90 transition-opacity" style={{
                                 background: "linear-gradient(135deg, hsl(217,91%,50%) 0%, hsl(199,89%,48%) 50%, hsl(174,72%,46%) 100%)",
                             }}>
-                            Get Started
-                        </Button>
+                                Get Started
+                            </Button>
+                        </Link>
+
                     </div>
 
                     {/* Mobile Menu Button */}
